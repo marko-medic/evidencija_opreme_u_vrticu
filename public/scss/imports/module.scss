@@ -1,0 +1,74 @@
+#table {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table td,
+#table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table tr:hover {
+  background-color: #ddd;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+#forma {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  input,
+  select,
+  textarea,
+  button {
+    padding: 15px 20px;
+    text-align: center;
+    display: block;
+    margin-right: 10px;
+  }
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.akcija {
+  display: flex;
+  align-items: center;
+  input {
+    margin-top: 10px;
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  button,
+  input,
+  a {
+    margin-right: 10px;
+    vertical-align: center;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

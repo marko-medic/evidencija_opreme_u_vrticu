@@ -1,0 +1,16 @@
+<h1>Dodaj novu opremu:</h1>
+
+<form id="forma" action="unesi" method="POST">
+    <input required type="text" placeholder="Naziv opreme" name="naziv">
+    <textarea name="opis" placeholder="Opis opreme:"></textarea>
+    <select name="tip" required>
+        <option value="" selected hidden disabled>
+            Izaberi tip opreme
+        </option>
+
+        {{#each tipoviOpreme}}
+        <option value="{{this.id}}">{{this.naziv}}</option>
+        {{/each}}
+    </select>
+    <button>Unos</button>
+</form>

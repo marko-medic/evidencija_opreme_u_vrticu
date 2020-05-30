@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Evidencija vaspitno obrazovne opreme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <aside class="navbar">
+        <ul>
+            <li><a class="active" href="/">Pocetna</a></li>
+            <li><a href="/oprema">Dostupna oprema</a></li>
+            <li><a href="/oprema/dodaj">Dodaj opremu</a></li>
+            {{#if session.ulogovan}}
+            <li><a href="/tipovi_opreme">Tipovi opreme</a></li>
+            <li><a href="/vaspitaci/logout">Odjava</a></li>
+            {{else}}
+            <li><a href="/vaspitaci/login">Prijava za vaspitaca</a></li>
+            {{/if}}
+        </ul>
+
+    </aside>
+
+    <main id="main">
+        {{{body}}}
+    </main>
+    <footer id="footer">
+        <p>Sajt radio: <strong>Dejan Babin</strong></p>
+    </footer>
+</body>
+
+</html>

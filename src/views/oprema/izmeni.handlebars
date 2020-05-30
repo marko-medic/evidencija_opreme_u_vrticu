@@ -1,0 +1,7 @@
+<h1>Izmeni opremu:</h1>
+
+<form id="forma" action="/oprema/{{info.id}}?_method=PUT" method="POST">
+    <input required type="text" placeholder="Naziv opreme" name="naziv" value="{{info.naziv}}">
+    <textarea name="opis" placeholder="Opis opreme:">{{info.opis}}</textarea>
+    <button>Izmena</button>
+</form>

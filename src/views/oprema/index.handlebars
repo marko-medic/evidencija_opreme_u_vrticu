@@ -1,0 +1,48 @@
+<div id="oprema">
+
+    {{#if oprema.length}}
+
+    <h1>Lista dostupne opreme:</h1>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Naziv</th>
+                <th>Opis</th>
+                <th>Tip</th>
+                <th>Akcija</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each oprema}}
+            <tr>
+                <td>{{this.id}}</td>
+                <td>{{this.naziv}}</td>
+                <td>{{this.opis}}</td>
+                <td>{{this.naziv_tipa}}</td>
+                <td class="akcija">
+                    <form action="/oprema/{{this.id}}" method="GET">
+                        <button type="submit">Izmeni</button>
+                    </form>
+                    <form action="?_method=DELETE&id={{this.id}}" method="POST">
+                        <button type="submit">Obrisi</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    {{else}}
+
+    <h1>Trenutno nije pronadjena ni jedna vaspitno obrazovna oprema</h1>
+
+    {{/if}}
+
+    <form id="forma" action="" method="GET">
+        <input type="text" placeholder="Pretraga opreme po nazivu" name="naziv">
+        <button>Pretrazi</button>
+    </form>
+
+
+</div>
